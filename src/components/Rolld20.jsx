@@ -1,3 +1,11 @@
-export default function RollAD20() {
-  return <button>Roll a D20!</button>;
+export default function Rolld20({handleDiceRoll, handleDiceSize}) {
+  return (
+    <button
+      onClick={() => {
+        handleDiceRoll();
+        handleDiceSize(20);
+      }}>
+      Roll a D20!
+    </button>
+  );
 }

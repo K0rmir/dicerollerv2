@@ -1,3 +1,11 @@
-export default function RollAD10() {
-  return <button>Roll a D10!</button>;
+export default function Rolld10({handleDiceRoll, handleDiceSize}) {
+  return (
+    <button
+      onClick={() => {
+        handleDiceRoll();
+        handleDiceSize(10);
+      }}>
+      Roll a D10!
+    </button>
+  );
 }
