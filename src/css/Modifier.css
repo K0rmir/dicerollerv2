@@ -1,0 +1,26 @@
+@media (max-width: 455px) {
+
+    .modifierControl {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        bottom: 17%;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .modifierControl button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: darkseagreen;
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 1.25rem;
+    }
+}
+
+

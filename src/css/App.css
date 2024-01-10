@@ -1,0 +1,41 @@
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 455px) {
+    #diceBtnGrid {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: repeat(3, 0.5fr);
+        gap: 10px;
+        height: 50px;
+        width: 175px;
+        margin: 0;
+        position: fixed;
+        bottom: 10%;
+        left: 30%;   
+    }
+
+
+
+
+
+
+}

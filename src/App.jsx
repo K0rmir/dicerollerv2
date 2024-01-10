@@ -6,13 +6,16 @@ import Rolld8 from "./components/Rolld8";
 import Rolld10 from "./components/Rolld10";
 import Rolld12 from "./components/Rolld12";
 import Rolld20 from "./components/Rolld20";
+import Modifier from "./components/Modifier";
+import "./css/App.css";
 
 export default function App() {
   const [result, setResult] = useState(0);
   const [diceSize, setDiceSize] = useState(0);
+  const [modifier, setModifierNum] = useState(0);
 
   function handleDiceRoll() {
-    const rollDiceResult = Math.ceil(Math.random() * diceSize);
+    const rollDiceResult = Math.ceil(Math.random() * diceSize + modifier);
     setResult(rollDiceResult);
     console.log(rollDiceResult);
   }
@@ -21,24 +24,48 @@ export default function App() {
     setDiceSize(updatedSize);
   }
 
+  function handleModifierNumMinus() {
+    setModifierNum(modifier - 1);
+  }
+
+  function handleModifierNumPlus() {
+    setModifierNum(modifier + 1);
+  }
+
   return (
-    <div>
+    <>
       <ResultBox result={result} />
-      <Rolld4 handleDiceRoll={handleDiceRoll} handleDiceSize={handleDiceSize} />
-      <Rolld6 handleDiceRoll={handleDiceRoll} handleDiceSize={handleDiceSize} />
-      <Rolld8 handleDiceRoll={handleDiceRoll} handleDiceSize={handleDiceSize} />
-      <Rolld10
-        handleDiceRoll={handleDiceRoll}
-        handleDiceSize={handleDiceSize}
+      <Modifier
+        handleModifierNumMinus={handleModifierNumMinus}
+        handleModifierNumPlus={handleModifierNumPlus}
+        modifier={modifier}
       />
-      <Rolld12
-        handleDiceRoll={handleDiceRoll}
-        handleDiceSize={handleDiceSize}
-      />
-      <Rolld20
-        handleDiceRoll={handleDiceRoll}
-        handleDiceSize={handleDiceSize}
-      />
-    </div>
+      <div id="diceBtnGrid">
+        <Rolld4
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+        <Rolld6
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+        <Rolld8
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+        <Rolld10
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+        <Rolld12
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+        <Rolld20
+          handleDiceRoll={handleDiceRoll}
+          handleDiceSize={handleDiceSize}
+        />
+      </div>
+    </>
   );
 }
