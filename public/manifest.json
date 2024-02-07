@@ -1,0 +1,16 @@
+{
+    "name": "Chrome Dice Roller",
+    "description": "An in-browser extension for rolling polyhedral dice.",
+    "author": "Kormir",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Open the popup"
+    },
+    "icons": {
+        "16": "dice-16.ico",
+        "32": "dice-32.ico",
+        "48": "dice-48.ico"
+    }
+}
