@@ -1,6 +1,4 @@
-@media (max-width: 455px) {
-
-    .resultBox {
+.resultBox {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,6 +26,6 @@
 
 
 
-}
+
 
 
