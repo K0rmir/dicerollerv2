@@ -15,11 +15,19 @@ export default function App() {
   const [diceSize, setDiceSize] = useState(0);
   const [modifier, setModifierNum] = useState(0);
   const [quantity, setQuantityNum] = useState(1);
+  const diceRolls = [];
 
   function handleDiceRoll() {
-    const rollDiceResult = Math.ceil(Math.random() * diceSize + modifier);
-    setResult(rollDiceResult);
-    console.log(rollDiceResult);
+    let total = 0;
+    for (let i = 0; i < quantity; i++) {
+      const rollDiceResult = Math.ceil(Math.random() * diceSize);
+      diceRolls.push(rollDiceResult);
+      total += rollDiceResult;
+    }
+    setResult(total + modifier);
+
+    console.log(total);
+    console.log(diceRolls);
   }
 
   function handleDiceSize(updatedSize) {
@@ -46,7 +54,7 @@ export default function App() {
 
   return (
     <>
-      <ResultBox result={result} />
+      <ResultBox result={result} quantity={quantity} />
       <Modifier
         handleModifierNumMinus={handleModifierNumMinus}
         handleModifierNumPlus={handleModifierNumPlus}
