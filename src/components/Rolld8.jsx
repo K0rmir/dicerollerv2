@@ -6,7 +6,7 @@ export default function Rolld8({handleDiceRoll, handleDiceSize}) {
         handleDiceRoll();
         handleDiceSize(8);
       }}>
-      Roll a D8!
+      Roll d8!
     </button>
   );
 }

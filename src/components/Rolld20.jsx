@@ -6,7 +6,7 @@ export default function Rolld20({handleDiceRoll, handleDiceSize}) {
         handleDiceRoll();
         handleDiceSize(20);
       }}>
-      Roll a D20!
+      Roll d20!
     </button>
   );
 }

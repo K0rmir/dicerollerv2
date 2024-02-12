@@ -15,6 +15,7 @@ export default function App() {
   const [diceSize, setDiceSize] = useState(0);
   const [modifier, setModifierNum] = useState(0);
   const [quantity, setQuantityNum] = useState(1);
+  const [diceRollsBreakdown, setDiceRollsBreakdown] = useState();
   const diceRolls = [];
 
   function handleDiceRoll() {
@@ -25,9 +26,7 @@ export default function App() {
       total += rollDiceResult;
     }
     setResult(total + modifier);
-
-    console.log(total);
-    console.log(diceRolls);
+    setDiceRollsBreakdown(diceRolls.join(", "));
   }
 
   function handleDiceSize(updatedSize) {
@@ -54,7 +53,13 @@ export default function App() {
 
   return (
     <>
-      <ResultBox result={result} quantity={quantity} />
+      <ResultBox
+        result={result}
+        quantity={quantity}
+        diceSize={diceSize}
+        diceRollsBreakdown={diceRollsBreakdown}
+        modifier={modifier}
+      />
       <Modifier
         handleModifierNumMinus={handleModifierNumMinus}
         handleModifierNumPlus={handleModifierNumPlus}
