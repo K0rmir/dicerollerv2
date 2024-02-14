@@ -8,20 +8,22 @@ export default function Modifier({
   return (
     <>
       <div className="modifierControl">
-        <p>Modifier</p>
-        <button
-          onClick={() => {
-            handleModifierNumMinus();
-          }}>
-          -
-        </button>
-        <p id="modifierNum">{modifier}</p>
-        <button
-          onClick={() => {
-            handleModifierNumPlus();
-          }}>
-          +
-        </button>
+        <p className="header">Modifier</p>
+        <div id="btns">
+          <button
+            onClick={() => {
+              handleModifierNumMinus();
+            }}>
+            -
+          </button>
+          <p id="modifierNum">{modifier}</p>
+          <button
+            onClick={() => {
+              handleModifierNumPlus();
+            }}>
+            +
+          </button>
+        </div>
       </div>
     </>
   );

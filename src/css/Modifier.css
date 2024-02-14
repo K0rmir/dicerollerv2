@@ -1,20 +1,19 @@
-
-
     .modifierControl {
         display: flex;
         align-items: center;
-        gap: 20px;
+        flex-direction: column;
         position: fixed;
-        bottom: 17%;
-        width: 100%;
-        margin-left: 10px;
+        bottom: 21%;
+        width: 25%;
+        height: fit-content;
+        left: 25%;
     }
 
     .modifierControl button {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: darkseagreen;
+        background-color: #FFBA01;
         border: 2px solid black;
         border-radius: 50%;
         width: 30px;
@@ -22,5 +21,21 @@
         font-size: 1.25rem;
     }
 
+    .modifierControl button:hover {
+        transform: translateY(-2px);
+    }
+
+    #btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header {
+        font-weight: 600;
+    }
+
+
+    
 
 

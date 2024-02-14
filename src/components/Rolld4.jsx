@@ -1,3 +1,5 @@
+import "../css/DiceGrid.css";
+
 export default function Rolld4({handleDiceRoll, handleDiceSize}) {
   return (
     <button

@@ -8,20 +8,22 @@ export default function Quantity({
   return (
     <>
       <div className="quantityControl">
-        <p>Quantity</p>
-        <button
-          onClick={() => {
-            handleQuantityNumMinus();
-          }}>
-          -
-        </button>
-        <p id="quantityNum">{quantity}</p>
-        <button
-          onClick={() => {
-            handleQuantityNumPlus();
-          }}>
-          +
-        </button>
+        <p className="header">Quantity</p>
+        <div id="btns">
+          <button
+            onClick={() => {
+              handleQuantityNumMinus();
+            }}>
+            -
+          </button>
+          <p id="quantityNum">{quantity}</p>
+          <button
+            onClick={() => {
+              handleQuantityNumPlus();
+            }}>
+            +
+          </button>
+        </div>
       </div>
     </>
   );

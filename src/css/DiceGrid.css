@@ -1,0 +1,9 @@
+.diceBtn {
+    background-color: #FFBA01;
+    padding: 3px;
+    border-radius: 5px;
+    }
+
+.diceBtn:hover {
+    transform: translateY(-2px);
+}

@@ -4,16 +4,14 @@
         justify-content: center;
         flex-direction: column;
         position: fixed;
-        top: 25%;
-        left: 20%;
-        background-color: darkcyan;
+        top: 10%;
+        left: 25%;
+        background-color: #FFBA01;
         border: 3px solid black;
+        border-radius: 5px;
         width: 15rem;
         padding: .25rem;
-    }
-    
-    
-    
+    }    
     
     #result {
         margin: 0;
